@@ -43,3 +43,26 @@ String s1="ohh";
 10.
  面向对象开发中，引用传递意味着传递的并不是实际的对象，而是对象的引用，
  因此外部对引用对象所作的改变  会  反映到所引用的对象上。
+
+11.
+0正1负。
+求反码：符号位不变，其他位按位取反；求补码：反码加1。
+补码的补码是原码。
+">>"（有符号）右移，int类型是8字节——32位，右移后，正数补"0"，负数补"1"。
+">>>"无符号/逻辑右移，不管符号位，高位都是补0，如果是负数，还是要先求补码，
+    然后不管负数的符号位，移位后高位补"0"，这时就当正数看待了，不需要再求补码的补码。
+
+12.
+System.arraycopy()是native方法，而且JVM里已经用.cpp写好了，效率高。
+而Object类的clone方法虽然也是native方法，但是编译后还要通过JNI(Java native interface)
+再次编译成.cpp文件才能执行。
+Arrays.copyOf(...)还是调用的System.arraycopy()方法。
+以上三种都是浅拷贝，拷贝的是引用；而for循环是深拷贝，拷贝的是值，效率低。
+
+13.
+HashMap使用synchronized关键字保证线程安全，
+ConcurrentHashMap使用内部类Segment(extends ReentrantLock)保证线程安全。
+HashMap实现了Map接口。
+SimpleDateFormat是线程不安全的。
+Arrays.asList返回的ArrayList是内部类，而不是java.util的ArrayList。
+

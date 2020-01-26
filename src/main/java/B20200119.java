@@ -10,7 +10,7 @@ public class B20200119 extends Person {
 
     public static void main(String[] args) {
         Person p=new B20200119();
-        System.out.println(p.name);
+
         }
     }
 
