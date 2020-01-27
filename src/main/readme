@@ -66,3 +66,15 @@ HashMap实现了Map接口。
 SimpleDateFormat是线程不安全的。
 Arrays.asList返回的ArrayList是内部类，而不是java.util的ArrayList。
 
+14.
+String类有构造方法：String(byte bytes[], Charset charset)传入 src,"gbk"
+然后调用String类的getBytes方法,传入Charset "UTF-8"返回值是bytes[] 。
+实现src从gbk到utf-8的编码。
+
+15.Java代码的初始化顺序
+（1）静态代码块优先于非静态；
+（2）父类构造优先于子类构造。
+ 且（1）比（2） 优先。
+
+
+
