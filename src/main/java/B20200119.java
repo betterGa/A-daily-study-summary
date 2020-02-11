@@ -1,15 +1,15 @@
 import jdk.nashorn.internal.ir.BaseNode;
 
- class Person
+ class Person1
 {
     private String name="Person";
     int age=0;}
 
-public class B20200119 extends Person {
+public class B20200119 extends Person1 {
   public String grade;
 
     public static void main(String[] args) {
-        Person p=new B20200119();
+        Person1 p=new B20200119();
 
         }
     }

@@ -84,3 +84,32 @@ String类有构造方法：String(byte bytes[], Charset charset)传入 src,"gbk"
 单目乘除位关系
 逻辑三目后赋值
 
+18.
+子类的构造方法中，如果没有显式调用父类的构造方法，
+就会默认调用父类的无参构造。
+（所以如果没有显式调用，父类就需要自行提供无参构造。）
+
+19.
+包装类类似于String类，也有常量池，
+Integer i=12;编译时会包装成 Integer i=Integer.valueOf(12);
+valueOf方法内部有IntegerCache类，维护了Integer类的数组Cache，长度是256，所以是-128~127。
+JVM会先看常量池中有无该值，有的话返回该引用，无再new 一个对象。
+
+20.
+遇到出现错误，有异常抛出（就是new了一个异常类对象，在控制台打印异常信息）时，程序终止执行。
+如果有try,catch，finally机制，
+在try块出现catch块的异常，说明异常被捕获，程序可以继续执行。
+
+21.
+标识符由数字、下划线、美元符号、字母组成，不能有关键字（小写，Class Boolean是可以的）
+开头不能是数字。
+
+22.
+CallableStatement-->(继承于)PreparedStatement-->Statement-->Wrapper
+
+23.
+HashSet-->（继承于）AbstractSet
+WeakHashMap-->AbstractMap
+List、Set都是接口。
+
+24.
